@@ -43,6 +43,17 @@ class _SettingsViewState extends State<SettingsView> {
                         'Ajustes',
                         style: AppTextStyles.titleText(context),
                       ),
+                      SizedBox(height: 30.sp,),
+                      Text(
+                          'Preferencias de notificaciones',
+                        style: AppTextStyles.labelText(context),
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          
+                        ],
+                      )
                     ],
                   ),
                 ),

@@ -6,6 +6,7 @@ import 'package:busme/views/settings_view.dart';
 import 'package:busme/views/notices_view.dart';
 import 'package:busme/views/routes_view.dart';
 import 'package:sizer/sizer.dart';
+import 'package:busme/constants/styles/app_text_styles.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -29,9 +30,13 @@ class _MainViewState extends State<MainView> {
     return Scaffold(
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        iconSize: 24.0,
+        iconSize: 22.sp,
         type: BottomNavigationBarType.fixed,
+        selectedItemColor: AppColors.primaryColor,
+        unselectedItemColor: Colors.black,
         backgroundColor: AppColors.backgroundColor,
+        selectedLabelStyle: AppTextStyles.selectedNavbarText(context),
+        unselectedLabelStyle: AppTextStyles.unselectedNavbarText(context),
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
@@ -42,44 +47,44 @@ class _MainViewState extends State<MainView> {
           BottomNavigationBarItem(
               icon: FUI(
                 file: FUIcons.regularRounded.home,
-                color: AppColors.navbarIconColor,
+                color: AppColors.navbarUnselectedColor,
               ),
               activeIcon: FUI(
                 file: FUIcons.solidRounded.home,
-                color: AppColors.navbarIconSelectedColor,
+                color: AppColors.navbarSelectedColor,
               ),
               label: 'Inicio',
           ),
           BottomNavigationBarItem(
             icon: FUI(
               file: FUIcons.regularRounded.map,
-              color: AppColors.navbarIconColor,
+              color: AppColors.navbarUnselectedColor,
             ),
             activeIcon: FUI(
               file: FUIcons.solidRounded.map,
-              color: AppColors.navbarIconSelectedColor,
+              color: AppColors.navbarSelectedColor,
             ),
             label: 'Rutas',
           ),
           BottomNavigationBarItem(
             icon: FUI(
               file: FUIcons.regularRounded.bell,
-              color: AppColors.navbarIconColor,
+              color: AppColors.navbarUnselectedColor,
             ),
             activeIcon: FUI(
               file: FUIcons.solidRounded.bell,
-              color: AppColors.navbarIconSelectedColor,
+              color: AppColors.navbarSelectedColor,
             ),
             label: 'Avisos',
           ),
           BottomNavigationBarItem(
             icon: FUI(
               file: FUIcons.regularRounded.settings,
-              color: AppColors.navbarIconColor,
+              color: AppColors.navbarUnselectedColor,
             ),
             activeIcon: FUI(
               file: FUIcons.solidRounded.settings,
-              color: AppColors.navbarIconSelectedColor,
+              color: AppColors.navbarSelectedColor,
             ),
             label: 'Ajustes',
           ),

@@ -85,7 +85,7 @@ class _HomeViewState extends State<HomeView> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.sp),
                         ),
-                        child: MapView(),
+                        //child: MapView(),
                       ),
                     ],
                   ),

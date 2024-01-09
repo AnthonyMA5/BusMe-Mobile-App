@@ -91,4 +91,18 @@ class AppTextStyles {
       color: AppColors.whiteTextColor,
     );
   }
+
+  static TextStyle selectedNavbarText(BuildContext context) {
+    return textMedium.copyWith(
+      fontSize: 12.sp,
+      color: AppColors.navbarSelectedColor,
+    );
+  }
+
+  static TextStyle unselectedNavbarText(BuildContext context) {
+    return textMedium.copyWith(
+      fontSize: 11.sp,
+      color: AppColors.navbarUnselectedColor,
+    );
+  }
 }
