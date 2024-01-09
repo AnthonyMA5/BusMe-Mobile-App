@@ -38,6 +38,9 @@ dependencies:
   sizer: ^2.0.15
   provider: ^6.1.1
   fui_kit: ^1.0.7
+  google_maps_flutter: ^2.5.1
+  shared_preferences: ^2.2.2
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:

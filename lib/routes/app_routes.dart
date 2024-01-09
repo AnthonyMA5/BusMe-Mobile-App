@@ -4,11 +4,12 @@ import 'package:busme/views/login_view.dart';
 import 'package:busme/views/onboarding_view.dart';
 import 'package:busme/views/splash_view.dart';
 import 'package:busme/views/home_view.dart';
+import 'package:busme/views/main_view.dart';
 
 const String ROUTE_SPLASH = '/splash';
 const String ROUTE_ONBOARDING = '/onboarding';
 const String ROUTE_LOGIN = '/login';
-const String ROUTE_HOME = '/home';
+const String ROUTE_MAIN = '/main';
 
 class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -22,9 +23,9 @@ class AppRoutes {
       case ROUTE_LOGIN:
         return CupertinoPageRoute(
             builder: (_) => LoginView(), settings: settings);
-      case ROUTE_HOME:
+      case ROUTE_MAIN:
         return CupertinoPageRoute(
-            builder: (_) => HomeView(), settings: settings);
+            builder: (_) => MainView(), settings: settings);
       default:
         return CupertinoPageRoute(
           builder: (_) => OnboardingView(),

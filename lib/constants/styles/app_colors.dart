@@ -15,7 +15,11 @@ class AppColors {
   static const Color hintTextColor = Color(0xFFB1B1B1);
 
   static const Color buttonColor = Color(0xFF00BCBC);
+  static const Color exitButtonColor = Color(0xFFFFECEC);
   static const Color disabledButtonColor = Color(0xFF5C5C5C);
+
+  static const Color navbarIconColor = Colors.black;
+  static const Color navbarIconSelectedColor = Color(0xFF009494);
 
   static const Color error = Color(0xFFC20505);
   static const Color success = Color(0xFF1A8400);

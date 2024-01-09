@@ -38,7 +38,7 @@ class AppTextStyles {
   // Title text
   static TextStyle titleText(BuildContext context) {
     return textSemiBold.copyWith(
-      fontSize: 20.sp,
+      fontSize: 18.sp,
       color: AppColors.textColor,
     );
   }

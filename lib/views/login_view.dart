@@ -83,7 +83,7 @@ class _LoginViewState extends State<LoginView> {
                                 }
                                 return null;
                               },
-                              controller: _emailController
+                              controller: _emailController,
                           ),
                           SizedBox(height: 25.sp,),
                           BusMeTextField(
@@ -122,7 +122,7 @@ class _LoginViewState extends State<LoginView> {
                         padding: EdgeInsets.symmetric(vertical: 50.sp),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            Navigator.pushNamedAndRemoveUntil(context, ROUTE_HOME, (route) => false);
+                            Navigator.pushNamedAndRemoveUntil(context, ROUTE_MAIN, (route) => false);
                           }
                         },
                     ),
