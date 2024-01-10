@@ -7,6 +7,7 @@ import 'package:fui_kit/fui_kit.dart';
 import 'package:busme/constants/styles/app_text_styles.dart';
 import 'package:busme/views/map_view.dart';
 import 'package:busme/widgets/bm_preference_switch.dart';
+import 'package:busme/widgets/bm_clickable_icon_text.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});
@@ -87,18 +88,19 @@ class _SettingsViewState extends State<SettingsView> {
                           });
                         },
                       ),
-                      SizedBox(height: 30.sp,),
-                      Row(
-                        children: [
-                          Text('Términos y Condiciones', style: AppTextStyles.labelText(context),),
-
-                        ],
+                      SizedBox(height: 25.sp,),
+                      BusMeClickableIconText(
+                        text: 'Términos y Condiciones',
+                        onTap: (){},
                       ),
-                      SizedBox(height: 30.sp,),
-                      Text('Aviso de Privacidad', style: AppTextStyles.labelText(context),),
-                      SizedBox(height: 30.sp,),
+                      SizedBox(height: 15.sp,),
+                      BusMeClickableIconText(
+                        text: 'Aviso de Privacidad',
+                        onTap: (){},
+                      ),
+                      SizedBox(height: 20.sp,),
                       Text('Versión de la aplicación', style: AppTextStyles.labelText(context),),
-                      SizedBox(height: 5.sp,),
+                      SizedBox(height: 8.sp,),
                       Text('1.0.0', style: AppTextStyles.contentText(context),),
                     ],
                   ),
