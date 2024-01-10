@@ -65,6 +65,13 @@ class AppTextStyles {
   }
 
   static TextStyle contentText(BuildContext context) {
+    return textRegular.copyWith(
+      fontSize: 12.sp,
+      color: AppColors.textColor,
+    );
+  }
+
+  static TextStyle boldContentText(BuildContext context) {
     return textMedium.copyWith(
       fontSize: 12.sp,
       color: AppColors.textColor,

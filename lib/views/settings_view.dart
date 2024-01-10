@@ -6,6 +6,7 @@ import 'package:busme/routes/app_routes.dart';
 import 'package:fui_kit/fui_kit.dart';
 import 'package:busme/constants/styles/app_text_styles.dart';
 import 'package:busme/views/map_view.dart';
+import 'package:busme/widgets/bm_preference_switch.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});
@@ -15,6 +16,7 @@ class SettingsView extends StatefulWidget {
 }
 
 class _SettingsViewState extends State<SettingsView> {
+  bool _isSwitched = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class _SettingsViewState extends State<SettingsView> {
       backgroundColor: AppColors.backgroundColor,
       body: SafeArea(
         child: LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints){
+          builder: (BuildContext context, BoxConstraints constraints) {
             return SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
@@ -43,17 +45,61 @@ class _SettingsViewState extends State<SettingsView> {
                         'Ajustes',
                         style: AppTextStyles.titleText(context),
                       ),
-                      SizedBox(height: 30.sp,),
+                      SizedBox(
+                        height: 30.sp,
+                      ),
                       Text(
-                          'Preferencias de notificaciones',
+                        'Preferencias de notificaciones',
                         style: AppTextStyles.labelText(context),
                       ),
+                      SizedBox(
+                        height: 15.sp,
+                      ),
+                      BusMePreferenceSwitch(
+                          label: 'Notificaciones de salida',
+                          description: 'Recibirás una notificación al iniciar el recorrido del autobús',
+                          value: _isSwitched,
+                          onChanged: (value) {
+                            setState(() {
+                              _isSwitched = value;
+                            });
+                          },
+                      ),
+                      SizedBox(height: 15.sp,),
+                      BusMePreferenceSwitch(
+                          label: 'Notificaciones de llegada',
+                          description: 'Recibirás una notificación al llegar al destino del autobús',
+                          value: _isSwitched,
+                          onChanged: (value) {
+                            setState(() {
+                              _isSwitched = value;
+                            });
+                          },
+                      ),
+                      SizedBox(height: 15.sp,),
+                      BusMePreferenceSwitch(
+                        label: 'Notificaciones de proximidad',
+                        description: 'Recibirás una notificación antes de que el autobús llegue a un punto de abordaje',
+                        value: _isSwitched,
+                        onChanged: (value) {
+                          setState(() {
+                            _isSwitched = value;
+                          });
+                        },
+                      ),
+                      SizedBox(height: 30.sp,),
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          
+                          Text('Términos y Condiciones', style: AppTextStyles.labelText(context),),
+
                         ],
-                      )
+                      ),
+                      SizedBox(height: 30.sp,),
+                      Text('Aviso de Privacidad', style: AppTextStyles.labelText(context),),
+                      SizedBox(height: 30.sp,),
+                      Text('Versión de la aplicación', style: AppTextStyles.labelText(context),),
+                      SizedBox(height: 5.sp,),
+                      Text('1.0.0', style: AppTextStyles.contentText(context),),
                     ],
                   ),
                 ),
