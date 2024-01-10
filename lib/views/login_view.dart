@@ -130,13 +130,15 @@ class _LoginViewState extends State<LoginView> {
                       alignment: Alignment.center,
                       child: Text(
                         TextStrings.signUpQuestion,
-                        style: AppTextStyles.labelText(context),
+                        style: AppTextStyles.boldContentText(context),
                       ),
                     ),
                     BusMeLinkText(
                         text: TextStrings.signUpLink,
                         alignment: Alignment.center,
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.pushNamed(context, ROUTE_REGISTER);
+                        },
                     ),
                   ],
                 ),

@@ -5,10 +5,12 @@ import 'package:busme/views/onboarding_view.dart';
 import 'package:busme/views/splash_view.dart';
 import 'package:busme/views/home_view.dart';
 import 'package:busme/views/main_view.dart';
+import 'package:busme/views/register_view.dart';
 
 const String ROUTE_SPLASH = '/splash';
 const String ROUTE_ONBOARDING = '/onboarding';
 const String ROUTE_LOGIN = '/login';
+const String ROUTE_REGISTER = '/register';
 const String ROUTE_MAIN = '/main';
 
 class AppRoutes {
@@ -23,6 +25,9 @@ class AppRoutes {
       case ROUTE_LOGIN:
         return CupertinoPageRoute(
             builder: (_) => LoginView(), settings: settings);
+      case ROUTE_REGISTER:
+        return CupertinoPageRoute(
+            builder: (_) => RegisterView(), settings: settings);
       case ROUTE_MAIN:
         return CupertinoPageRoute(
             builder: (_) => MainView(), settings: settings);
