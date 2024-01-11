@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:busme/constants/styles/app_text_styles.dart';
 import 'package:busme/constants/styles/app_colors.dart';
 import 'package:busme/widgets/bm_button.dart';
-import '';
+import 'package:sizer/sizer.dart';
 
 class OTPVerificationView extends StatelessWidget {
   const OTPVerificationView({super.key});

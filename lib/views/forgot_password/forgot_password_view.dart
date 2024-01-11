@@ -53,7 +53,7 @@ class ForgotPasswordView extends StatelessWidget {
                       ),
                       SizedBox(height: 15.sp,),
                       Text('Ingresa el correo electrónico de tu cuenta para recibir un código y restaurar tu contraseña',
-                        style: AppTextStyles.subtitleText(context),
+                        style: AppTextStyles.contentText(context),
                       ),
                       SizedBox(height: 30.sp,),
                       Form(
@@ -75,6 +75,7 @@ class ForgotPasswordView extends StatelessWidget {
                           padding: EdgeInsets.symmetric(vertical: 50.sp),
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
+                              Navigator.popAndPushNamed(context, ROUTE_OTP_VERF);
                             }
                           },
                       ),
