@@ -115,7 +115,9 @@ class _LoginViewState extends State<LoginView> {
                     BusMeLinkText(
                       text: TextStrings.forgotPasswordTitle,
                       alignment: Alignment.centerRight,
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.pushNamed(context, ROUTE_FORGOT_PASSWORD);
+                      },
                     ),
                     BusMeButton(
                         titleText: TextStrings.signIn,
