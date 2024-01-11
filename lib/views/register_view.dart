@@ -21,6 +21,8 @@ class _RegisterViewState extends State<RegisterView> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  bool? _isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,9 +141,64 @@ class _RegisterViewState extends State<RegisterView> {
                         SizedBox(
                           height: 20.sp,
                         ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 24.sp,
+                              height: 24.sp,
+                              child: Transform.scale(
+                                scale: 0.75.sp,
+                                child: Checkbox(
+                                  value: _isChecked,
+                                  onChanged: (bool? value) {
+                                    setState(() {
+                                      _isChecked = value!;
+                                    });
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                      SizerUtil.deviceType ==
+                                          DeviceType.mobile
+                                          ? 4.sp
+                                          : 1.5.sp,
+                                    ),
+                                  ),
+                                  fillColor: MaterialStateProperty.resolveWith<Color>(
+                                        (Set<MaterialState> states) {
+                                      if (states.contains(
+                                          MaterialState.selected)) {
+                                        return AppColors.selectCheckboxColor;
+                                      }
+                                      return AppColors.unselectCheckboxColor;
+                                    },
+                                  ),
+                                  side: BorderSide(
+                                    color: Colors.grey,
+                                    width: 1.2,
+                                  ),
+                                  visualDensity:
+                                  VisualDensity.comfortable,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Acepto los',
+                              style:
+                              AppTextStyles.contentText(context),
+                            ),
+                            SizedBox(width: 5.sp,),
+                            BusMeLinkText(
+                              text: 'Términos y Condiciones',
+                              alignment: Alignment.centerLeft,
+                              onTap: (){},
+                            ),
+                          ],
+                        ),
                         BusMeButton(
                           titleText: TextStrings.signUp,
-                          padding: EdgeInsets.symmetric(vertical: 50.sp),
+                          padding: EdgeInsets.symmetric(vertical: 30.sp),
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               Navigator.pushNamedAndRemoveUntil(context, ROUTE_MAIN, (route) => false);
