@@ -8,6 +8,7 @@ import 'package:busme/views/main_view.dart';
 import 'package:busme/views/register_view.dart';
 import 'package:busme/views/forgot_password/forgot_password_view.dart';
 import 'package:busme/views/forgot_password/otp_verf_view.dart';
+import 'package:busme/views/forgot_password/reset_password_view.dart';
 
 const String ROUTE_SPLASH = '/splash';
 const String ROUTE_ONBOARDING = '/onboarding';
@@ -16,6 +17,7 @@ const String ROUTE_REGISTER = '/register';
 const String ROUTE_MAIN = '/main';
 const String ROUTE_FORGOT_PASSWORD = '/forgot_password';
 const String ROUTE_OTP_VERF = '/otp_verf';
+const String ROUTE_RESET_PASSWORD = '/reset_password';
 
 class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -38,6 +40,9 @@ class AppRoutes {
       case ROUTE_OTP_VERF:
         return CupertinoPageRoute(
             builder: (_) => OTPVerificationView(), settings: settings);
+      case ROUTE_RESET_PASSWORD:
+        return CupertinoPageRoute(
+            builder: (_) => ResetPasswordView(), settings: settings);
       case ROUTE_MAIN:
         return CupertinoPageRoute(
             builder: (_) => MainView(), settings: settings);

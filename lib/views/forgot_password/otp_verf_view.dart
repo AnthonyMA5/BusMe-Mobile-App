@@ -3,6 +3,7 @@ import 'package:busme/constants/styles/app_text_styles.dart';
 import 'package:busme/constants/styles/app_colors.dart';
 import 'package:busme/widgets/bm_button.dart';
 import 'package:sizer/sizer.dart';
+import 'package:busme/routes/app_routes.dart';
 
 class OTPVerificationView extends StatelessWidget {
 
@@ -103,7 +104,9 @@ class OTPVerificationView extends StatelessWidget {
                       BusMeButton(
                           titleText: 'Verificar código',
                           padding: EdgeInsets.only(top: 50.sp),
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.popAndPushNamed(context, ROUTE_RESET_PASSWORD);
+                          },
                       ),
                     ],
                   ),
