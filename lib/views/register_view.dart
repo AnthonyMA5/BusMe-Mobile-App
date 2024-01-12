@@ -169,9 +169,9 @@ class _RegisterViewState extends State<RegisterView> {
                                         (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.selected)) {
-                                        return AppColors.selectCheckboxColor;
+                                        return AppColors.selectColor;
                                       }
-                                      return AppColors.unselectCheckboxColor;
+                                      return AppColors.unselectColor;
                                     },
                                   ),
                                   side: BorderSide(

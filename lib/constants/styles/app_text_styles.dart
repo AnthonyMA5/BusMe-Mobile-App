@@ -78,6 +78,13 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle otpText(BuildContext context) {
+    return textSemiBold.copyWith(
+      fontSize: 15.sp,
+      color: AppColors.textColor,
+    );
+  }
+
   static TextStyle errorText(BuildContext context) {
     return textMedium.copyWith(
       fontSize: 11.sp,

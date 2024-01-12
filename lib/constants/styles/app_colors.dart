@@ -18,8 +18,8 @@ class AppColors {
   static const Color exitButtonColor = Color(0xFFFFECEC);
   static const Color disabledButtonColor = Color(0xFF5C5C5C);
 
-  static const Color unselectCheckboxColor = Color(0xFFEEEEEE);
-  static const Color selectCheckboxColor = Color(0xFF009393);
+  static const Color unselectColor = Color(0xFFEEEEEE);
+  static const Color selectColor = Color(0xFF009393);
 
   static const Color navbarUnselectedColor = Colors.black;
   static const Color navbarSelectedColor = Color(0xFF009494);
