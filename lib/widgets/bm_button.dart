@@ -7,11 +7,14 @@ class BusMeButton extends StatefulWidget {
   final String titleText;
   final EdgeInsetsGeometry padding;
   final VoidCallback onPressed;
+  final TextStyle? textStyle;
+  final Color? backgroundColor;
 
-  BusMeButton(
-      {required this.titleText,
+  BusMeButton({required this.titleText,
       required this.padding,
-      required this.onPressed});
+      required this.onPressed,
+      this.textStyle,
+      this.backgroundColor});
 
   @override
   State<BusMeButton> createState() => _BusMeButtonState();
@@ -26,13 +29,13 @@ class _BusMeButtonState extends State<BusMeButton> {
         onPressed: widget.onPressed,
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(
-              AppColors.buttonColor),
+              widget.backgroundColor ?? AppColors.buttonColor),
           minimumSize: MaterialStateProperty.all<Size>(
               Size(double.infinity, 35.sp)),
         ),
         child: Text(
           widget.titleText,
-          style: AppTextStyles.buttonText(context),
+          style: widget.textStyle ?? AppTextStyles.buttonText(context),
         ),
       ),
     );

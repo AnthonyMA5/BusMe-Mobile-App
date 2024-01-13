@@ -67,17 +67,17 @@ class ForgotPasswordView extends StatelessWidget {
                                 validator: validateEmail,
                                 controller: _emailController,
                               ),
+                              BusMeButton(
+                                titleText: 'Continuar',
+                                padding: EdgeInsets.symmetric(vertical: 50.sp),
+                                onPressed: () {
+                                  if (_formKey.currentState!.validate()) {
+                                    Navigator.popAndPushNamed(context, ROUTE_OTP_VERF);
+                                  }
+                                },
+                              ),
                             ],
                           ),
-                      ),
-                      BusMeButton(
-                          titleText: 'Continuar',
-                          padding: EdgeInsets.symmetric(vertical: 50.sp),
-                          onPressed: () {
-                            if (_formKey.currentState!.validate()) {
-                              Navigator.popAndPushNamed(context, ROUTE_OTP_VERF);
-                            }
-                          },
                       ),
                     ],
                   ),

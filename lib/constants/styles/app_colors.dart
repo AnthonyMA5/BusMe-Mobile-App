@@ -13,10 +13,11 @@ class AppColors {
   static const Color contextTextColor = Color(0xFF484848);
   static const Color whiteTextColor = Colors.white;
   static const Color hintTextColor = Color(0xFFB1B1B1);
+  static const Color disabledTextColor = Color(0xFF5C5C5C);
 
   static const Color buttonColor = Color(0xFF00BCBC);
   static const Color exitButtonColor = Color(0xFFFFECEC);
-  static const Color disabledButtonColor = Color(0xFF5C5C5C);
+  static const Color disabledButtonColor = Color(0xFFCACACA);
 
   static const Color unselectColor = Color(0xFFEEEEEE);
   static const Color selectColor = Color(0xFF009393);
@@ -29,4 +30,6 @@ class AppColors {
   static const Color warning = Color(0xFFDA5C00);
   static const Color info = Color(0xFF0076B9);
   static const Color note = Color(0xFFFFFD7F);
+  static const Color aditional = Color(0xFF616161);
+
 }

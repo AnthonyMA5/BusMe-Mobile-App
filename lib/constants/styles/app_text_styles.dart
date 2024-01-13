@@ -85,6 +85,20 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle conditionalText(BuildContext context) {
+    return textMedium.copyWith(
+      fontSize: 11.sp,
+      color: AppColors.aditional,
+    );
+  }
+
+  static TextStyle successSmallText(BuildContext context) {
+    return textMedium.copyWith(
+      fontSize: 11.sp,
+      color: AppColors.success,
+    );
+  }
+
   static TextStyle errorText(BuildContext context) {
     return textMedium.copyWith(
       fontSize: 11.sp,
@@ -103,6 +117,13 @@ class AppTextStyles {
     return textSemiBold.copyWith(
       fontSize: 15.sp,
       color: AppColors.whiteTextColor,
+    );
+  }
+
+  static TextStyle disabledButtonText(BuildContext context) {
+    return textSemiBold.copyWith(
+      fontSize: 15.sp,
+      color: AppColors.disabledTextColor,
     );
   }
 
