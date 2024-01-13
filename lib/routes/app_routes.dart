@@ -10,6 +10,7 @@ import 'package:busme/views/forgot_password/forgot_password_view.dart';
 import 'package:busme/views/forgot_password/otp_verf_view.dart';
 import 'package:busme/views/forgot_password/reset_password_view.dart';
 import 'package:busme/views/legal_info/terms_cond_view.dart';
+import 'package:busme/views/legal_info/privacy_notice.dart';
 
 const String ROUTE_SPLASH = '/splash';
 const String ROUTE_ONBOARDING = '/onboarding';
@@ -20,6 +21,7 @@ const String ROUTE_FORGOT_PASSWORD = '/forgot_password';
 const String ROUTE_OTP_VERF = '/otp_verf';
 const String ROUTE_RESET_PASSWORD = '/reset_password';
 const String ROUTE_TERMS_COND = '/terms_cond';
+const String ROUTE_PRIVACY_NOTICE = '/privacy_notice';
 
 class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -48,6 +50,9 @@ class AppRoutes {
       case ROUTE_TERMS_COND:
         return CupertinoPageRoute(
             builder: (_) => TermsConditionsView(), settings: settings);
+      case ROUTE_PRIVACY_NOTICE:
+        return CupertinoPageRoute(
+            builder: (_) => PrivacyNoticeView(), settings: settings);
       case ROUTE_MAIN:
         return CupertinoPageRoute(
             builder: (_) => MainView(), settings: settings);
