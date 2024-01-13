@@ -6,6 +6,7 @@ import 'package:sizer/sizer.dart';
 import 'package:busme/widgets/bm_text_field.dart';
 import 'package:busme/routes/app_routes.dart';
 import 'package:busme/widgets/bm_button.dart';
+import 'package:busme/widgets/bm_title_view.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
@@ -33,23 +34,8 @@ class ForgotPasswordView extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          GestureDetector(
-                            onTap: (){
-                              Navigator.pop(context, ROUTE_LOGIN);
-                            },
-                            child: FUI(
-                              file: FUIcons.regularRounded.arrowSmallLeft,
-                            ),
-                          ),
-                          SizedBox(width: 8.sp,),
-                          Text(
-                            'Olvidé mi contraseña',
-                            style: AppTextStyles.titleText(context),
-                          ),
-                        ],
+                      BusMeTitleView(
+                          title: 'Olvidé mi contraseña',
                       ),
                       SizedBox(height: 15.sp,),
                       Text('Ingresa el correo electrónico de tu cuenta para recibir un código y restaurar tu contraseña',

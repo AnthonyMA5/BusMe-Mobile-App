@@ -16,8 +16,7 @@ class ResetPasswordView extends StatefulWidget {
 
 class _ResetPasswordViewState extends State<ResetPasswordView> {
   final TextEditingController _newPasswordController = TextEditingController();
-  final TextEditingController _confirmNewPasswordController =
-      TextEditingController();
+  final TextEditingController _confirmNewPasswordController = TextEditingController();
 
   bool _isVisible = false;
   bool _isPasswordEightCharacters = false;

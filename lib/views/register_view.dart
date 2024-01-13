@@ -192,7 +192,9 @@ class _RegisterViewState extends State<RegisterView> {
                             BusMeLinkText(
                               text: 'Términos y Condiciones',
                               alignment: Alignment.centerLeft,
-                              onTap: (){},
+                              onTap: (){
+                                Navigator.pushNamed(context, ROUTE_TERMS_COND);
+                              },
                             ),
                           ],
                         ),
