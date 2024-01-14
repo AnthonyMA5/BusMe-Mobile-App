@@ -105,7 +105,7 @@ class OTPVerificationView extends StatelessWidget {
                           titleText: 'Verificar código',
                           padding: EdgeInsets.only(top: 50.sp),
                           onPressed: (){
-                            Navigator.popAndPushNamed(context, ROUTE_RESET_PASSWORD);
+                            Navigator.pushNamedAndRemoveUntil(context, ROUTE_RESET_PASSWORD, (route)=>false);
                           },
                       ),
                     ],

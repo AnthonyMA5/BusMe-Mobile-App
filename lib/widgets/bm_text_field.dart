@@ -57,13 +57,12 @@ class _BusMeTextFieldState extends State<BusMeTextField> {
                 hintStyle: AppTextStyles.hintText(context),
                 suffixIcon: widget.showIcon ?? false == true
                     ? Padding(
-                  padding: EdgeInsets.all(5.sp),
+                  padding: EdgeInsets.symmetric(horizontal: 8.sp),
                   child: GestureDetector(
                     onTap: widget.onIconTap,
                     child: FUI(
                       file: widget.icon ?? FUIcons.regularRounded.addressBook,
-                      width: 18.sp,
-                      height: 18.sp,
+                      height: 10.sp,
                       color: AppColors.disabledButtonColor,
                     ),
                   ),

@@ -58,7 +58,7 @@ class ForgotPasswordView extends StatelessWidget {
                                 padding: EdgeInsets.symmetric(vertical: 50.sp),
                                 onPressed: () {
                                   if (_formKey.currentState!.validate()) {
-                                    Navigator.popAndPushNamed(context, ROUTE_OTP_VERF);
+                                    Navigator.pushNamedAndRemoveUntil(context, ROUTE_OTP_VERF, (route)=>false);
                                   }
                                 },
                               ),

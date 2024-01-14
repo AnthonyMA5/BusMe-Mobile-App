@@ -30,7 +30,6 @@ class _MainViewState extends State<MainView> {
     return Scaffold(
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        iconSize: 22.sp,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: AppColors.primaryColor,
         unselectedItemColor: Colors.black,
@@ -48,10 +47,12 @@ class _MainViewState extends State<MainView> {
               icon: FUI(
                 file: FUIcons.regularRounded.home,
                 color: AppColors.navbarUnselectedColor,
+                height: 18.sp,
               ),
               activeIcon: FUI(
                 file: FUIcons.solidRounded.home,
                 color: AppColors.navbarSelectedColor,
+                height: 18.sp,
               ),
               label: 'Inicio',
           ),
@@ -59,10 +60,12 @@ class _MainViewState extends State<MainView> {
             icon: FUI(
               file: FUIcons.regularRounded.map,
               color: AppColors.navbarUnselectedColor,
+              height: 18.sp,
             ),
             activeIcon: FUI(
               file: FUIcons.solidRounded.map,
               color: AppColors.navbarSelectedColor,
+              height: 18.sp,
             ),
             label: 'Rutas',
           ),
@@ -70,10 +73,12 @@ class _MainViewState extends State<MainView> {
             icon: FUI(
               file: FUIcons.regularRounded.bell,
               color: AppColors.navbarUnselectedColor,
+              height: 18.sp,
             ),
             activeIcon: FUI(
               file: FUIcons.solidRounded.bell,
               color: AppColors.navbarSelectedColor,
+              height: 18.sp,
             ),
             label: 'Avisos',
           ),
@@ -81,10 +86,12 @@ class _MainViewState extends State<MainView> {
             icon: FUI(
               file: FUIcons.regularRounded.settings,
               color: AppColors.navbarUnselectedColor,
+              height: 18.sp,
             ),
             activeIcon: FUI(
               file: FUIcons.solidRounded.settings,
               color: AppColors.navbarSelectedColor,
+              height: 18.sp,
             ),
             label: 'Ajustes',
           ),

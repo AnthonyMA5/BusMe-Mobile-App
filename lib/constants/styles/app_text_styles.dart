@@ -128,7 +128,7 @@ class AppTextStyles {
   }
 
   static TextStyle selectedNavbarText(BuildContext context) {
-    return textMedium.copyWith(
+    return textSemiBold.copyWith(
       fontSize: 12.sp,
       color: AppColors.navbarSelectedColor,
     );

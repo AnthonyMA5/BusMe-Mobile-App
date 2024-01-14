@@ -6,6 +6,7 @@ import 'package:busme/constants/styles/app_text_styles.dart';
 import 'package:busme/widgets/bm_button.dart';
 import 'package:busme/widgets/bm_text_field.dart';
 import 'package:busme/widgets/bm_validity_indicator.dart';
+import 'package:busme/routes/app_routes.dart';
 
 class ResetPasswordView extends StatefulWidget {
   const ResetPasswordView({super.key});
@@ -61,6 +62,7 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
     });
 
     checkIfFunctionsCompleted();
+    onPasswordMatched(password);
   }
 
   onPasswordMatched(String password) {
@@ -236,7 +238,7 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                               titleText: 'Restablecer contraseña',
                               padding: EdgeInsets.symmetric(vertical: 50.sp),
                               onPressed: _isButtonEnabled == true
-                                  ? () { Navigator.of(context).pop(); }
+                                  ? () { Navigator.pushNamedAndRemoveUntil(context, ROUTE_LOGIN, (route)=>false); }
                                   : () {},
                               backgroundColor: _isButtonEnabled
                                   ? AppColors.buttonColor
