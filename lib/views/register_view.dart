@@ -203,7 +203,7 @@ class _RegisterViewState extends State<RegisterView> {
                           padding: EdgeInsets.symmetric(vertical: 30.sp),
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
-                              Navigator.pushNamedAndRemoveUntil(context, ROUTE_MAIN, (route) => false);
+                              Navigator.popAndPushNamed(context, ROUTE_MAIN);
                             }
                           },
                         ),

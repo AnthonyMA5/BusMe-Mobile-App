@@ -124,7 +124,7 @@ class _LoginViewState extends State<LoginView> {
                         padding: EdgeInsets.symmetric(vertical: 50.sp),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            Navigator.pushNamedAndRemoveUntil(context, ROUTE_MAIN, (route) => false);
+                            Navigator.popAndPushNamed(context, ROUTE_MAIN);
                           }
                         },
                     ),
@@ -139,7 +139,7 @@ class _LoginViewState extends State<LoginView> {
                         text: TextStrings.signUpLink,
                         alignment: Alignment.center,
                         onTap: (){
-                          Navigator.pushNamed(context, ROUTE_REGISTER);
+                          Navigator.popAndPushNamed(context, ROUTE_REGISTER);
                         },
                     ),
                   ],

@@ -91,12 +91,16 @@ class _SettingsViewState extends State<SettingsView> {
                       SizedBox(height: 25.sp,),
                       BusMeClickableIconText(
                         text: 'Términos y Condiciones',
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.pushNamed(context, ROUTE_TERMS_COND);
+                        },
                       ),
                       SizedBox(height: 15.sp,),
                       BusMeClickableIconText(
                         text: 'Aviso de Privacidad',
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.pushNamed(context, ROUTE_PRIVACY_NOTICE);
+                        },
                       ),
                       SizedBox(height: 20.sp,),
                       Text('Versión de la aplicación', style: AppTextStyles.labelText(context),),
