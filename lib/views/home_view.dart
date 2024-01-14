@@ -27,7 +27,6 @@ class _HomeViewState extends State<HomeView> {
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints){
             return SingleChildScrollView(
-              physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
               child: ConstrainedBox(
                 constraints: BoxConstraints(
@@ -43,7 +42,7 @@ class _HomeViewState extends State<HomeView> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'Buenos días\nAnthony',
+                            'Buenos días,\nAnthony',
                             style: AppTextStyles.titleText(context),
                           ),
                           Spacer(),
