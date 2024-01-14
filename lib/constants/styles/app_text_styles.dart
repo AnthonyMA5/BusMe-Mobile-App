@@ -72,7 +72,7 @@ class AppTextStyles {
   }
 
   static TextStyle boldContentText(BuildContext context) {
-    return textMedium.copyWith(
+    return textSemiBold.copyWith(
       fontSize: 12.sp,
       color: AppColors.textColor,
     );

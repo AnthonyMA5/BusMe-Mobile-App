@@ -218,7 +218,7 @@ class _RegisterViewState extends State<RegisterView> {
                           text: TextStrings.signInLink,
                           alignment: Alignment.center,
                           onTap: (){
-                            Navigator.pop(context, ROUTE_LOGIN);
+                            Navigator.pushNamedAndRemoveUntil(context, ROUTE_LOGIN, (route) => false);
                           },
                         ),
                       ],
