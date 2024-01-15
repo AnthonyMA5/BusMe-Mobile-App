@@ -5,7 +5,6 @@ import 'package:sizer/sizer.dart';
 import 'package:busme/routes/app_routes.dart';
 import 'package:fui_kit/fui_kit.dart';
 import 'package:busme/constants/styles/app_text_styles.dart';
-import 'package:busme/views/map_view.dart';
 import 'package:busme/widgets/bm_preference_switch.dart';
 import 'package:busme/widgets/bm_clickable_icon_text.dart';
 

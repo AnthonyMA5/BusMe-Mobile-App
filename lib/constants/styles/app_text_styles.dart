@@ -78,6 +78,27 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle noticeTitleText(BuildContext context) {
+    return textSemiBold.copyWith(
+      fontSize: 12.sp,
+      color: AppColors.textColor,
+    );
+  }
+
+  static TextStyle noticeContentText(BuildContext context) {
+    return textRegular.copyWith(
+      fontSize: 10.5.sp,
+      color: AppColors.textColor,
+    );
+  }
+
+  static TextStyle noticeTimeText(BuildContext context) {
+    return textSemiBold.copyWith(
+      fontSize: 10.sp,
+      color: AppColors.hintTextColor,
+    );
+  }
+
   static TextStyle otpText(BuildContext context) {
     return textSemiBold.copyWith(
       fontSize: 15.sp,

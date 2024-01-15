@@ -25,6 +25,9 @@ class AppColors {
   static const Color navbarUnselectedColor = Colors.black;
   static const Color navbarSelectedColor = Color(0xFF009494);
 
+  static const Color noticeUnreadColor = Color(0xFFCEFCF7);
+  static const Color noticeReadColor = Colors.white;
+
   static const Color error = Color(0xFFC20505);
   static const Color success = Color(0xFF1A8400);
   static const Color warning = Color(0xFFDA5C00);
