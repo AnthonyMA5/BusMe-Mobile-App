@@ -5,7 +5,7 @@ import 'package:sizer/sizer.dart';
 import 'package:busme/widgets/bm_link_text.dart';
 import 'package:busme/widgets/bm_text_field.dart';
 import 'package:busme/widgets/bm_button.dart';
-import 'package:busme/constants/strings/image_strings.dart';
+import 'package:busme/constants/paths/image_paths.dart';
 import 'package:busme/constants/strings/text_strings.dart';
 import 'package:busme/routes/app_routes.dart';
 
@@ -49,7 +49,7 @@ class _RegisterViewState extends State<RegisterView> {
                           margin: EdgeInsets.only(bottom: 10.sp),
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage(ImageStrings.appLogo),
+                                image: AssetImage(ImagePaths.appLogo),
                                 fit: BoxFit.cover,
                               )),
                         ),
