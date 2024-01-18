@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fui_kit/fui_kit.dart';
 import 'package:busme/constants/styles/app_text_styles.dart';
+import 'package:busme/constants/paths/icon_paths.dart';
 
 class BusMeClickableIconText extends StatelessWidget {
 
@@ -21,7 +22,7 @@ class BusMeClickableIconText extends StatelessWidget {
           IconButton(
             onPressed: onTap,
             icon: FUI(
-              file: FUIcons.regularRounded.arrowSmallRight,
+              file: IconPaths.next,
             ),
           ),
         ],

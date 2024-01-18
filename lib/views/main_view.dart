@@ -7,6 +7,7 @@ import 'package:busme/views/notices_view.dart';
 import 'package:busme/views/routes_view.dart';
 import 'package:sizer/sizer.dart';
 import 'package:busme/constants/styles/app_text_styles.dart';
+import 'package:busme/constants/paths/icon_paths.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -45,12 +46,12 @@ class _MainViewState extends State<MainView> {
         items: [
           BottomNavigationBarItem(
               icon: FUI(
-                file: FUIcons.regularRounded.home,
+                file: IconPaths.home,
                 color: AppColors.navbarUnselectedColor,
                 height: 18.sp,
               ),
               activeIcon: FUI(
-                file: FUIcons.solidRounded.home,
+                file: IconPaths.homeSelected,
                 color: AppColors.navbarSelectedColor,
                 height: 18.sp,
               ),
@@ -58,12 +59,12 @@ class _MainViewState extends State<MainView> {
           ),
           BottomNavigationBarItem(
             icon: FUI(
-              file: FUIcons.regularRounded.map,
+              file: IconPaths.routes,
               color: AppColors.navbarUnselectedColor,
               height: 18.sp,
             ),
             activeIcon: FUI(
-              file: FUIcons.solidRounded.map,
+              file: IconPaths.routesSelected,
               color: AppColors.navbarSelectedColor,
               height: 18.sp,
             ),
@@ -71,12 +72,12 @@ class _MainViewState extends State<MainView> {
           ),
           BottomNavigationBarItem(
             icon: FUI(
-              file: FUIcons.regularRounded.bell,
+              file: IconPaths.notice,
               color: AppColors.navbarUnselectedColor,
               height: 18.sp,
             ),
             activeIcon: FUI(
-              file: FUIcons.solidRounded.bell,
+              file: IconPaths.noticeSelected,
               color: AppColors.navbarSelectedColor,
               height: 18.sp,
             ),
@@ -84,12 +85,12 @@ class _MainViewState extends State<MainView> {
           ),
           BottomNavigationBarItem(
             icon: FUI(
-              file: FUIcons.regularRounded.settings,
+              file: IconPaths.settings,
               color: AppColors.navbarUnselectedColor,
               height: 18.sp,
             ),
             activeIcon: FUI(
-              file: FUIcons.solidRounded.settings,
+              file: IconPaths.settingsSelected,
               color: AppColors.navbarSelectedColor,
               height: 18.sp,
             ),

@@ -7,6 +7,7 @@ import 'package:busme/widgets/bm_button.dart';
 import 'package:busme/widgets/bm_text_field.dart';
 import 'package:busme/widgets/bm_validity_indicator.dart';
 import 'package:busme/routes/app_routes.dart';
+import 'package:busme/constants/paths/icon_paths.dart';
 
 class ResetPasswordView extends StatefulWidget {
   const ResetPasswordView({super.key});
@@ -120,8 +121,8 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                               obscureText: !_isVisible,
                               showIcon: true,
                               icon: _isVisible
-                                  ? FUIcons.regularRounded.eyeCrossed
-                                  : FUIcons.regularRounded.eye,
+                                  ? IconPaths.hidePassword
+                                  : IconPaths.showPassword,
                               validator: (String? input) {
                                 if (input == null || input.isEmpty) {
                                   return 'Por favor, ingrese un valor válido.';

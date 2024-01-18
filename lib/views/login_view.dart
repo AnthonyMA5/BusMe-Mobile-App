@@ -1,5 +1,6 @@
 import 'package:busme/constants/sizes/app_dimensions.dart';
 import 'package:busme/constants/paths/image_paths.dart';
+import 'package:busme/constants/paths/icon_paths.dart';
 import 'package:busme/constants/strings/text_strings.dart';
 import 'package:busme/constants/styles/app_colors.dart';
 import 'package:busme/constants/styles/app_text_styles.dart';
@@ -92,7 +93,7 @@ class _LoginViewState extends State<LoginView> {
                               keyboardType: TextInputType.visiblePassword,
                               obscureText: isPasswordVisible,
                               showIcon: true,
-                              icon: isPasswordVisible ? FUIcons.regularRounded.eye : FUIcons.regularRounded.eyeCrossed,
+                              icon: isPasswordVisible ? IconPaths.showPassword : IconPaths.hidePassword,
                               validator: (String? input) {
                                 if (input == null || input.isEmpty) {
                                   return 'Por favor, ingrese un valor válido.';
