@@ -6,6 +6,7 @@ import 'package:busme/routes/app_routes.dart';
 import 'package:fui_kit/fui_kit.dart';
 import 'package:busme/constants/styles/app_text_styles.dart';
 import 'package:busme/views/map_view.dart';
+import 'package:busme/routes/app_routes.dart';
 
 class RoutesView extends StatefulWidget {
   const RoutesView({super.key});
@@ -43,6 +44,12 @@ class _RoutesViewState extends State<RoutesView> {
                         'Rutas',
                         style: AppTextStyles.titleText(context),
                       ),
+                      ElevatedButton(
+                          onPressed: (){
+                            Navigator.pushNamed(context, ROUTE_TRAVEL_QUALITY);
+                          },
+                          child: Text('Jere'),
+                      )
                     ],
                   ),
                 ),

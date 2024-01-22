@@ -11,17 +11,25 @@ import 'package:busme/views/forgot_password/otp_verf_view.dart';
 import 'package:busme/views/forgot_password/reset_password_view.dart';
 import 'package:busme/views/legal_info/terms_cond_view.dart';
 import 'package:busme/views/legal_info/privacy_notice.dart';
+import 'package:busme/views/travel_hub/travel_quality_view.dart';
 
 const String ROUTE_SPLASH = '/splash';
 const String ROUTE_ONBOARDING = '/onboarding';
 const String ROUTE_LOGIN = '/login';
 const String ROUTE_REGISTER = '/register';
 const String ROUTE_MAIN = '/main';
+
+// Forgot password
 const String ROUTE_FORGOT_PASSWORD = '/forgot_password';
 const String ROUTE_OTP_VERF = '/otp_verf';
 const String ROUTE_RESET_PASSWORD = '/reset_password';
+
+// Legal information
 const String ROUTE_TERMS_COND = '/terms_cond';
 const String ROUTE_PRIVACY_NOTICE = '/privacy_notice';
+
+// Travel hub
+const String ROUTE_TRAVEL_QUALITY = '/travel_quality';
 
 class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -53,6 +61,9 @@ class AppRoutes {
       case ROUTE_PRIVACY_NOTICE:
         return CupertinoPageRoute(
             builder: (_) => PrivacyNoticeView(), settings: settings);
+      case ROUTE_TRAVEL_QUALITY:
+        return CupertinoPageRoute(
+            builder: (_) => TravelQualityView(), settings: settings);
       case ROUTE_MAIN:
         return CupertinoPageRoute(
             builder: (_) => MainView(), settings: settings);
