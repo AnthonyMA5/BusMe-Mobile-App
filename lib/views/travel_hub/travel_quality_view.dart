@@ -6,7 +6,7 @@ import 'package:busme/widgets/bm_title_view.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:fui_kit/fui_kit.dart';
 import 'package:busme/widgets/bm_button.dart';
-import 'package:busme/widgets/bm_text_field.dart';
+import 'package:busme/widgets/bm_comments_field.dart';
 
 class TravelQualityView extends StatelessWidget {
 
@@ -64,7 +64,11 @@ class TravelQualityView extends StatelessWidget {
                         },
                       ),
                       SizedBox(height: 40.sp),
-
+                      BusMeCommentsField(
+                        labelText: 'Si deseas agregar un comentario colócalo aquí...',
+                        hintText: 'Cuéntanos más sobre tu experiencia...',
+                        controller: _commentsController,
+                      ),
                       BusMeButton(
                           titleText: 'Enviar calificación',
                           padding: EdgeInsets.symmetric(vertical:40.sp),

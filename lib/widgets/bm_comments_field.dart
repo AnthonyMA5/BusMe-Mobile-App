@@ -9,9 +9,9 @@ class BusMeCommentsField extends StatelessWidget {
   final TextEditingController controller;
 
   BusMeCommentsField({
-    this.labelText,
-    this.hintText,
-    this.controller});
+    required this.labelText,
+    required this.hintText,
+    required this.controller});
 
   @override
   Widget build(BuildContext context) {
