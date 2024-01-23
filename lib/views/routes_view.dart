@@ -48,8 +48,14 @@ class _RoutesViewState extends State<RoutesView> {
                           onPressed: (){
                             Navigator.pushNamed(context, ROUTE_TRAVEL_QUALITY);
                           },
-                          child: Text('Jere'),
-                      )
+                          child: Text('Calificar viaje'),
+                      ),
+                      ElevatedButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, ROUTE_TRAVEL_QUALITY);
+                        },
+                        child: Text('Quejas y sugerencias'),
+                      ),
                     ],
                   ),
                 ),
